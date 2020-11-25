@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.telmoricardo.cursomc.domain.Categoria;
+import com.telmoricardo.cursomc.repositories.ProdutoRepository;
 import com.telmoricardo.cursomc.service.CategoriaService;
 
 @RestController
@@ -18,7 +19,7 @@ import com.telmoricardo.cursomc.service.CategoriaService;
 public class CategoriaResource {
 	
 	@Autowired
-	private CategoriaService categoriaService;
+	private CategoriaService categoriaService;	
 	
 	@GetMapping()
 	public List<Categoria> listar() {
